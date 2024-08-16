@@ -31,16 +31,21 @@ h1 {
 
 nav ul {
     display: flex;
-    text-align: right;
+    text-align: center;
     align-items: center; /* Center links vertically */
     flex-wrap: wrap; /* Allows wrapping for small screens */
     margin-top: 10px;
+    flex-direction: row;
 
 }
 
 nav ul li {  
     list-style-type: none;
     margin: 0px 10px; /* Reduced margin between links */
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid white ;
 }
 
 nav ul li a {
@@ -65,9 +70,9 @@ main {
 }
 
 .rightSection img {
-    width: 100%;
     max-width: 380px;
     border-radius: 50%;
+    flex-direction: column-reverse;
 }
 
 .leftSection {
@@ -171,6 +176,10 @@ p {
     text-decoration: none;
 }
 
+nav .fas{
+    display: none;
+}
+
 @media (max-width: 768px) {
     .row, .reverse {
         flex-direction: column;
@@ -184,6 +193,44 @@ p {
     .row, .reverse {
         margin-bottom: 30px;
     }
+    
+    .leftSection span{
+        font-size: 1.4rem;
+        margin: 20px 0;
+    }
+
+    nav .fas{
+        display: block;
+        align-items: flex-end;
+    }
+
+    nav ul{
+        background: rgb(194, 232, 232);
+        position: fixed;
+        top: 0px;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.8s;
+    }
+
+    #move{
+        margin-left: 2.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin:25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
 
 
@@ -191,7 +238,7 @@ p {
 @media (min-width: 768px) {
     /* For tablets and larger screens */
     nav ul {
-        margin-left: 50px; /* Adjust left margin */
+        margin-left: 200px; /* Adjust left margin */
     }
 
     .firstSection {
@@ -208,7 +255,7 @@ p {
 @media (min-width: 1024px) {
     /* For desktop screens */
     nav ul {
-        margin-left: auto; /* Move navigation to the right */
+        margin-left: 750px; /* Move navigation to the right */
     }
 
     .leftSection {
@@ -226,9 +273,8 @@ p {
         font-size: 2rem;
     }
 
-    .leftSection {
-        margin-bottom: 20px;
-    }
+
+
 }
 
 /* Skills Section */
@@ -249,6 +295,14 @@ p {
 }
 
 @media (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile tags ul li{
+        flex-wrap: nowrap;
+    }
     .skills ul {
         flex-direction: column;
         align-items: center;
@@ -256,6 +310,7 @@ p {
 
     .skills ul li {
         flex: 0 0 100%;
+        flex-wrap: nowrap;
     }
 }
 

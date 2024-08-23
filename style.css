@@ -80,6 +80,10 @@ main {
     margin: 20px 0;
 }
 
+.leftSection span{
+    font-size: 6rem;
+}
+
 .skills {
     text-align: center;
     font-size: xx-large;
@@ -231,6 +235,7 @@ nav .fas{
         left: 25px;
         cursor: pointer;
     }
+    
 }
 
 
@@ -273,7 +278,13 @@ nav .fas{
         font-size: 2rem;
     }
 
+    #element{
+        font-size: 3rem;
+    }
 
+    .leftSection span{
+        font-size: 3rem;
+    }
 
 }
 

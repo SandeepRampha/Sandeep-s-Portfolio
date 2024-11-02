@@ -77,11 +77,12 @@ main {
 
 .leftSection {
     font-size: 2rem;
-    margin: 20px 0;
+    /* margin: 20px 3px; */
+    margin-left: 30px;
 }
 
 .leftSection span{
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
 .skills {
@@ -259,8 +260,9 @@ nav .fas{
 
 @media (min-width: 1024px) {
     /* For desktop screens */
-    nav ul {
-        margin-left: 750px; /* Move navigation to the right */
+    
+    nav ul { 
+     margin-left: 600px; /*Move navigation to the right */
     }
 
     .leftSection {
